@@ -1,0 +1,60 @@
+@font-face {
+  font-family: Chicago;
+  src: 
+  local(Chicago),
+  url('../public/ChicagoFLF.ttf')
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.desktop{
+  background-image: url(../public/wallpaper.jpg);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .barra{
+    display: flex;
+    align-items: flex-end;
+    img{
+      height: 34px;
+    }
+  }
+}
+.draggableContent{
+  width: auto;
+  height: 88vh;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 10px;
+  .orden{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .trash{
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+    justify-content: center;
+    width: 132px;
+  }
+}
+
+
+.carpetPic{
+  width: fit-content;
+  text-align: center;
+  font-family: Chicago;
+  margin: 10px;
+  p{
+    background-color: rgba(255, 255, 255, 0.377);
+  }
+  img{
+    width: 45px;
+  }
+}
