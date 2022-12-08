@@ -19,7 +19,7 @@
     display: flex;
     align-items: flex-end;
     img{
-      height: 34px;
+      height: 35px;
     }
   }
 }
@@ -54,7 +54,8 @@
   p{
     background-color: rgba(255, 255, 255, 0.377);
   }
-  img{
+  input{
     width: 45px;
+    cursor: pointer;
   }
 }
