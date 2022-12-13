@@ -2,11 +2,17 @@ import "./App.scss";
 import Navbar from "./components/Navbar.jsx";
 import Draggable from "react-draggable";
 import { useState } from "react";
+import { Modal } from "./components/Modal";
 
 function App() {
   const open = require('./imgs/barraclosed.png');
   const closed = require('./imgs/barraopen.png');
   const [img, setImg] = useState(false);
+  const [estadoModal1, cambiarEstadoModal1] = useState(false);
+  const [estadoModal2, cambiarEstadoModal2] = useState(false);
+  const [estadoModal3, cambiarEstadoModal3] = useState(false);
+  const [estadoModal4, cambiarEstadoModal4] = useState(false);
+  const [estadoModal5, cambiarEstadoModal5] = useState(false);
 
   const imgChangeHandler = () => {
     if(!img) {
@@ -15,10 +21,37 @@ function App() {
       setImg(false)
     }
   };
+  
   return (
     <div className='desktop'>
       <Navbar></Navbar>
       <div className='draggableContent'>
+      <Modal
+       estado={estadoModal1}
+       cambiarEstado={cambiarEstadoModal1}
+       posicionModal={'center'}>
+        <img src="../profilepic.png" alt=""/>
+      </Modal>
+      <Modal
+       estado={estadoModal2}
+       cambiarEstado={cambiarEstadoModal2}>
+        <img src="../about.png" alt=""/>
+      </Modal>
+      <Modal
+       estado={estadoModal3}
+       cambiarEstado={cambiarEstadoModal3}>
+        <img src="../education.png" alt=""/>
+      </Modal>
+      <Modal
+       estado={estadoModal4}
+       cambiarEstado={cambiarEstadoModal4}>
+        <img src="../tools.png" alt=""/>
+      </Modal>
+      <Modal
+       estado={estadoModal5}
+       cambiarEstado={cambiarEstadoModal5}>
+        <img src="../exp.png" alt=""/>
+      </Modal>
         <div className='orden'>
           <Draggable>
             <div className='carpetPic'>
@@ -28,31 +61,31 @@ function App() {
           </Draggable>
           <Draggable>
             <div className='carpetPic'>
-            <input type="image" name="pp" id="pp" src="../77.png" alt="pp"/>
+            <input onClick={() => cambiarEstadoModal1(!estadoModal1)} type="image" name="pp" id="pp" src="../77.png" alt="pp"/>
               <p>Profile Pic</p>
             </div>
           </Draggable>
           <Draggable>
             <div className='carpetPic'>
-            <input type="image" name="about" id="about" src="../11.png" alt="about"/>
+            <input onClick={() => cambiarEstadoModal2(!estadoModal2)} type="image" name="about" id="about" src="../11.png" alt="about"/>
               <p>About Me</p>
             </div>
           </Draggable>
           <Draggable>
             <div className='carpetPic'>
-            <input type="image" name="tools" id="tools" src="../58.png" alt="tools"/>
+            <input onClick={() => cambiarEstadoModal4(!estadoModal4)} type="image" name="tools" id="tools" src="../58.png" alt="tools"/>
               <p>Tools</p>
             </div>
           </Draggable>
           <Draggable>
             <div className='carpetPic'>
-            <input type="image" name="edu" id="edu" src="../44.png" alt="edu"/>
+            <input onClick={() => cambiarEstadoModal3(!estadoModal3)} type="image" name="edu" id="edu" src="../44.png" alt="edu"/>
               <p>Education</p>
             </div>
           </Draggable>
           <Draggable>
             <div className='carpetPic'>
-            <input type="image" name="work" id="work" src="../62.png" alt="work"/>
+            <input onClick={() => cambiarEstadoModal5(!estadoModal5)} type="image" name="work" id="work" src="../62.png" alt="work"/>
               <p>Work Exp</p>
             </div>
           </Draggable>
