@@ -59,3 +59,18 @@
     cursor: pointer;
   }
 }
+
+.loadingPage{
+  background-image: url(../public/wallpaper.jpg);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img{
+   width: 500px;
+   padding-bottom: 200px;
+  }
+
+
+}

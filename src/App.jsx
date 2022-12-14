@@ -3,11 +3,13 @@ import Navbar from "./components/Navbar.jsx";
 import Draggable from "react-draggable";
 import { useState } from "react";
 import { Modal } from "./components/Modal";
+import { useEffect } from "react";
 
 function App() {
   const open = require('./imgs/barraclosed.png');
   const closed = require('./imgs/barraopen.png');
   const [img, setImg] = useState(false);
+  const [loaded, setLoaded] = useState(false)
   const [estadoModal1, cambiarEstadoModal1] = useState(false);
   const [estadoModal2, cambiarEstadoModal2] = useState(false);
   const [estadoModal3, cambiarEstadoModal3] = useState(false);
@@ -22,7 +24,16 @@ function App() {
     }
   };
   
+  useEffect(() => {
+    setTimeout(() => {
+      setLoaded(true)
+    }, 5000)
+  })
+
+
   return (
+    <>
+    {loaded ? (
     <div className='desktop'>
       <Navbar></Navbar>
       <div className='draggableContent'>
@@ -105,7 +116,13 @@ function App() {
       
     </div>
     
-  );
+    ) : (
+      <div className="loadingPage">
+        <img src="../charge.gif" alt=""/>
+      </div>
+    )}
+</> )
 }
+  
 
 export default App;
