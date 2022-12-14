@@ -8,13 +8,14 @@ import { useEffect } from "react";
 function App() {
   const open = require('./imgs/barraclosed.png');
   const closed = require('./imgs/barraopen.png');
-  const [img, setImg] = useState(false);
+  const [img, setImg] = useState(true);
   const [loaded, setLoaded] = useState(false)
   const [estadoModal1, cambiarEstadoModal1] = useState(false);
   const [estadoModal2, cambiarEstadoModal2] = useState(false);
   const [estadoModal3, cambiarEstadoModal3] = useState(false);
   const [estadoModal4, cambiarEstadoModal4] = useState(false);
   const [estadoModal5, cambiarEstadoModal5] = useState(false);
+  const [estadoModal6, cambiarEstadoModal6] = useState(false);
 
   const imgChangeHandler = () => {
     if(!img) {
@@ -63,10 +64,15 @@ function App() {
        cambiarEstado={cambiarEstadoModal5}>
         <img src="../exp.png" alt=""/>
       </Modal>
+      <Modal
+       estado={estadoModal6}
+       cambiarEstado={cambiarEstadoModal6}>
+        <img src="../mac.png" alt=""/>
+      </Modal>
         <div className='orden'>
           <Draggable>
             <div className='carpetPic'>
-              <input type="image" name="hd" id="hd" src="../1.png" alt="hd"/>
+              <input onClick={() => cambiarEstadoModal6(!estadoModal6)} type="image" name="hd" id="hd" src="../1.png" alt="hd"/>
               <p>MacintoshHD</p>
             </div>
           </Draggable>
