@@ -18,8 +18,21 @@
   .barra{
     display: flex;
     align-items: flex-end;
+    font-family: Chicago;
+    font-weight: 100;
+    color: rgb(44, 44, 44);
+    justify-content: space-between;
+    font-size: smaller;
+    p{
+      @media (max-width: 700px) {
+        display: none;
+      }
+    }
     img{
-      height: 35px;
+      height: 32px;
+      @media (max-width: 700px) {
+        height: 50% ;
+      }
     }
   }
 }
@@ -53,10 +66,16 @@
   margin: 10px;
   p{
     background-color: rgba(255, 255, 255, 0.377);
+    @media (max-width: 700px) {
+      font-size: smaller;
+    }
   }
   input{
     width: 45px;
     cursor: pointer;
+    @media (max-width: 700px) {
+      width: 30px ;
+    }
   }
 }
 
@@ -70,6 +89,9 @@
   img{
    width: 500px;
    padding-bottom: 200px;
+   @media (max-width: 700px) {
+    width: 90vw ;
+  }
   }
 
 

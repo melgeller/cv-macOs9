@@ -118,6 +118,7 @@ function App() {
       </div>
       <div className="barra">
       <img src={!img ? open : closed } alt="" onClick={imgChangeHandler}/>
+      <p>Silvia Abad García, 2022</p>
       </div>
       
     </div>

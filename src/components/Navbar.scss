@@ -10,6 +10,11 @@
   font-family: Chicago;
 
   .list {
+    .displayNone{
+      @media (max-width: 700px) {
+        display: none;
+      }
+    }
     ul {
       height: 3vh;
       display: flex;
@@ -23,6 +28,9 @@
       list-style: none;
       text-decoration: none;
       font-weight: 600;
+      @media (max-width: 700px) {
+        font-size: smaller;
+      }
       cursor: pointer;
       &:hover{
         background-color: rgb(65, 65, 65);
@@ -48,6 +56,9 @@
         text-decoration: none;
         font-weight: 600;
         cursor: pointer;
+        @media (max-width: 700px) {
+          font-size: smaller;
+        }
         img{
             width: 25px;
             margin-right: 10px;

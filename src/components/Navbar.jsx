@@ -19,11 +19,11 @@ const Navbar = () => {
             <img src='../apple.png' alt='' />
           </li>
           <li>File</li>
-          <li>Edit</li>
-          <li>View</li>
-          <li>Navigate</li>
-          <li>Tool</li>
-          <li>Window</li>
+          <li className="displayNone">Edit</li>
+          <li className="displayNone">View</li>
+          <li className="displayNone">Navigate</li>
+          <li className="displayNone">Tool</li>
+          <li className="displayNone">Window</li>
           <li>Help</li>
         </ul>
       </div>
