@@ -110,7 +110,7 @@ function App() {
         <div className="trash">
             <Draggable>
               <div className='carpetPic'>
-              <input type="image" name="trash" id="trash" src="../6.png" alt="trash"/>
+              <a href="https://melgeller-portfolio.vercel.app/"><img src="../6.png" alt=""/></a>
                 <p>Trash</p>
               </div>
             </Draggable>
